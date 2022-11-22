@@ -1,0 +1,31 @@
+{
+  "name": "razor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "pnpm build; node dist/index.js",
+    "build": "tsc --build",
+    "format": "prettier --config .prettierrc.json -uw ./src/ *.md",
+    "check": "tsc --noEmit; eslint --config ./.eslintrc.json ./src/ --ext .js,.ts,.vue"
+  },
+  "keywords": [],
+  "private": true,
+  "author": "",
+  "devDependencies": {
+    "@rushstack/eslint-patch": "1.2.0",
+    "@trivago/prettier-plugin-sort-imports": "^3.4.0",
+    "@typescript-eslint/eslint-plugin": "5.44.0",
+    "@typescript-eslint/parser": "5.44.0",
+    "eslint": "8.28.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-sort-exports": "^0.8.0",
+    "prettier": "2.7.1",
+    "typescript": "4.9.3"
+  },
+  "dependencies": {
+    "chalk": "5.1.2"
+  }
+}
