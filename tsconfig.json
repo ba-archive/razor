@@ -9,19 +9,12 @@
     "resolveJsonModule": true,
     "isolatedModules": false,
     "esModuleInterop": true,
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext"],
     "skipLibCheck": true,
     "outDir": "dist",
     "declaration": true,
     "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "src"
   },
-  "include": [
-    "src/*.ts",
-    "src/*.d.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-  ],
 }
