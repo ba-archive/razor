@@ -8,9 +8,11 @@ function getMomotalkFullList(resDir: string) {
       momotalkFilesList.push(path.resolve(resDir, 'excel', file));
     }
   });
-  return momotalkFilesList.map(file => {
-    return JSON.parse(fs.readFileSync(file, 'utf8')).DataList;
-  }).flat();
+  return momotalkFilesList
+    .map(file => {
+      return JSON.parse(fs.readFileSync(file, 'utf8')).DataList;
+    })
+    .flat();
 }
 
 function doMomotalkJob(resDir: string) {

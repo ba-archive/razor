@@ -2,7 +2,10 @@ import chalk from 'chalk';
 import fs from 'fs';
 import path from 'path';
 
-export default function walk(dir: string, callback: (pathname: string) => void) {
+export default function walk(
+  dir: string,
+  callback: (pathname: string) => void
+) {
   fs.readdir(dir, (err, files) => {
     if (err) {
       console.log(chalk.red(err));
