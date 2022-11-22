@@ -1,3 +1,5 @@
+// 没必要
+
 import fs from 'fs';
 import path from 'path';
 import { Student } from '../types/types';
