@@ -37,6 +37,7 @@ export interface MomotalkTitle {
   TextKr?: string;
   TextEn?: string;
   TextTh?: string;
+  TextTw?: string;
 }
 
 export interface FavorSchedule {
@@ -54,6 +55,7 @@ export interface FavorSchedule {
   TextKr?: string;
   TextEn?: string;
   TextTh?: string;
+  TextTw?: string;
   VoiceJp?: string;
 }
 
@@ -64,6 +66,7 @@ export interface RawFavorScheduleTitle {
   TextKr?: string;
   TextEn?: string;
   TextTh?: string;
+  TextTw?: string;
 }
 
 export interface FavorScheduleTitle {
@@ -74,6 +77,7 @@ export interface FavorScheduleTitle {
   TextKr?: string;
   TextEn?: string;
   TextTh?: string;
+  TextTw?: string;
 }
 
 export interface StudentMomotalkData {

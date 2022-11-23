@@ -36,6 +36,7 @@ function getMomotalkTitle(
       TextKr: titleObject?.TextKr,
       TextEn: titleObject?.TextEn,
       TextTh: titleObject?.TextTh,
+      TextTw: titleObject?.TextTw,
     };
   });
 

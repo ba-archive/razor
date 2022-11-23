@@ -28,6 +28,7 @@ function getFavorScheduleTitle(resDir: string): RawFavorScheduleTitle[] {
         TextKr: e.TextKr,
         TextEn: e.TextEn,
         TextTh: e.TextTh,
+        TextTw: e.TextTw,
       };
     });
 }
