@@ -28,6 +28,10 @@ export interface Momotalk {
   ImagePath: string | undefined;
   MessageKR: string | undefined;
   MessageJP: string | undefined;
+  MessageCN: string | undefined;
+  MessageEN: string | undefined;
+  MessageTH: string | undefined;
+  MessageTW: string | undefined;
 }
 
 export interface MomotalkTitle {

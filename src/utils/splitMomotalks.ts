@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import fs from 'fs';
+import jsYaml from 'js-yaml';
 import { groupBy } from 'lodash-es';
 import path from 'path';
 import { RES_DIR_NAME, ROOT_DIR_NAME } from '../const/__DIRNAME.js';
@@ -8,7 +9,7 @@ import { getMomotalkTitle } from './getMomotalkTitle.js';
 import { getFavorScheduleTitle } from './loadFavorScheduleDialog.js';
 
 function splitMomotalks(momotalkList: Momotalk[]) {
-  const MOMOTALK_DIR_NAME = path.resolve(ROOT_DIR_NAME, 'output', 'momotalks');
+  const MOMOTALK_DIR_NAME = path.resolve(ROOT_DIR_NAME, 'output', 'momotalk');
 
   if (!fs.existsSync(MOMOTALK_DIR_NAME)) {
     fs.mkdirSync(MOMOTALK_DIR_NAME, { recursive: true });
@@ -26,7 +27,7 @@ function splitMomotalks(momotalkList: Momotalk[]) {
     // console.log(momotalksById[studentId][0]);
     const studentMomotalkJsonPath = path.resolve(
       MOMOTALK_DIR_NAME,
-      `${studentId}.json`
+      `${studentId}.yml`
     );
 
     const momotalkTitles = getMomotalkTitle(
@@ -37,12 +38,20 @@ function splitMomotalks(momotalkList: Momotalk[]) {
     const studentMomotalkData: StudentMomotalkData = {
       CharacterId: parseInt(studentId),
       title: momotalkTitles,
-      content: momotalksById[studentId],
+      content: momotalksById[studentId].map(e => {
+        e.MessageCN = e.MessageCN || '';
+        e.MessageJP = e.MessageJP || '';
+        e.MessageKR = e.MessageKR || '';
+        e.MessageEN = e.MessageEN || '';
+        e.MessageTH = e.MessageTH || '';
+        e.MessageTW = e.MessageTW || '';
+        return e;
+      }),
     };
 
     fs.writeFile(
       studentMomotalkJsonPath,
-      JSON.stringify(studentMomotalkData, null, 2),
+      jsYaml.dump(studentMomotalkData),
       err => {
         if (err) {
           console.log(chalk.red(err));

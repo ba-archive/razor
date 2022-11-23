@@ -31,12 +31,12 @@ function getMomotalkTitle(
       GroupId: parseInt(favorScheduleId.MessageGroupId),
       FavorScheduleId: favorScheduleId.FavorScheduleId,
       CharacterId: favorScheduleId.CharacterId,
-      TextJp: titleObject?.TextJp,
-      TextCn: titleObject?.TextCn,
-      TextKr: titleObject?.TextKr,
-      TextEn: titleObject?.TextEn,
-      TextTh: titleObject?.TextTh,
-      TextTw: titleObject?.TextTw,
+      TextJp: titleObject?.TextJp || '',
+      TextCn: titleObject?.TextCn || '',
+      TextKr: titleObject?.TextKr || '',
+      TextEn: titleObject?.TextEn || '',
+      TextTh: titleObject?.TextTh || '',
+      TextTw: titleObject?.TextTw || '',
     };
   });
 

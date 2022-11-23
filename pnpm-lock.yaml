@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@rushstack/eslint-patch': 1.2.0
   '@trivago/prettier-plugin-sort-imports': 3.4.0
+  '@types/js-yaml': 4.0.5
   '@types/lodash-es': 4.17.6
   '@types/minimist': 1.2.2
   '@types/node': 18.11.9
@@ -13,6 +14,7 @@ specifiers:
   eslint-config-prettier: 8.5.0
   eslint-plugin-import: 2.26.0
   eslint-plugin-sort-exports: 0.8.0
+  js-yaml: 4.1.0
   lodash-es: 4.17.21
   minimist: 1.2.7
   prettier: 2.7.1
@@ -20,12 +22,14 @@ specifiers:
 
 dependencies:
   chalk: 5.1.2
+  js-yaml: 4.1.0
   lodash-es: 4.17.21
   minimist: 1.2.7
 
 devDependencies:
   '@rushstack/eslint-patch': 1.2.0
   '@trivago/prettier-plugin-sort-imports': 3.4.0_prettier@2.7.1
+  '@types/js-yaml': 4.0.5
   '@types/lodash-es': 4.17.6
   '@types/minimist': 1.2.2
   '@types/node': 18.11.9
@@ -402,6 +406,10 @@ packages:
       - supports-color
     dev: true
 
+  /@types/js-yaml/4.0.5:
+    resolution: {integrity: sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA==}
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
@@ -657,7 +665,6 @@ packages:
 
   /argparse/2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
-    dev: true
 
   /array-includes/3.1.6:
     resolution: {integrity: sha512-sgTbLvL6cNnw24FnbaDyjmvddQ2ML8arZsgaJhoABMoplz/4QRhtrYS+alr1BUM1Bwp6dhx8vVCBSLG+StwOFw==}
@@ -1490,7 +1497,6 @@ packages:
     hasBin: true
     dependencies:
       argparse: 2.0.1
-    dev: true
 
   /jsesc/2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
