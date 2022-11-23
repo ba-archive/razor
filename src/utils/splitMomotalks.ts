@@ -36,7 +36,7 @@ function splitMomotalks(momotalkList: Momotalk[]) {
 
     const studentMomotalkData: StudentMomotalkData = {
       CharacterId: parseInt(studentId),
-      titles: momotalkTitles,
+      title: momotalkTitles,
       content: momotalksById[studentId],
     };
 

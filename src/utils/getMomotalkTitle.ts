@@ -1,4 +1,4 @@
-import { uniq } from 'lodash-es';
+import { uniq, uniqBy } from 'lodash-es';
 import {
   FavorScheduleTitle,
   Momotalk,
@@ -23,7 +23,7 @@ function getMomotalkTitle(
         };
       })
   );
-  return favorScheduleIds.map(favorScheduleId => {
+  const momotalkTitles = favorScheduleIds.map(favorScheduleId => {
     const titleObject = favorScheduleTitleList.find(
       e => favorScheduleId.MessageGroupId === e.GroupId.toString()
     );
@@ -38,6 +38,8 @@ function getMomotalkTitle(
       TextTh: titleObject?.TextTh,
     };
   });
+
+  return uniqBy(momotalkTitles, 'FavorScheduleId');
 }
 
 export { getMomotalkTitle };
