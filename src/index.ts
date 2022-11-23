@@ -1,6 +1,5 @@
 import minimist from 'minimist';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { RES_DIR_NAME } from './const/__DIRNAME.js';
 import { doMomotalkJob } from './jobs/doMomotalkJob.js';
 import { doStoryJob } from './jobs/doStoryJob.js';
 import { Args } from './types/types';
@@ -8,9 +7,8 @@ import { Args } from './types/types';
 const args: Args = minimist(process.argv.slice(2));
 
 const jobType = (args.t || args.type || 'both').toLowerCase();
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const resDir = path.join(__dirname, '..', 'resources');
+
+const resDir = RES_DIR_NAME;
 
 if (jobType.startsWith('momo')) {
   doMomotalkJob(resDir);

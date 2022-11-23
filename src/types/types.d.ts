@@ -11,6 +11,9 @@ export interface Student {
   [key: string]: string | number | boolean | undefined;
 }
 
+/**
+ * @see https://github.com/ba-archive/blue-archive-story-viewer/issues/24
+ */
 export interface Momotalk {
   MessageGroupId: number;
   Id: number;
@@ -25,4 +28,56 @@ export interface Momotalk {
   ImagePath: string | undefined;
   MessageKR: string | undefined;
   MessageJP: string | undefined;
+}
+
+export interface MomotalkTitle {
+  FavorScheduleId: number;
+  TextCn?: string;
+  TextJp: string;
+  TextKr?: string;
+  TextEn?: string;
+  TextTh?: string;
+}
+
+export interface FavorSchedule {
+  GroupId: number;
+  SelectionGroup: number;
+  BGMId: number;
+  Sound: string;
+  Transition: number;
+  BGName: number;
+  BGEffect: number;
+  PopupFileName: string;
+  ScriptKr: string;
+  TextJp: string;
+  TextCn?: string;
+  TextKr?: string;
+  TextEn?: string;
+  TextTh?: string;
+  VoiceJp?: string;
+}
+
+export interface RawFavorScheduleTitle {
+  GroupId: number;
+  TextJp?: string;
+  TextCn?: string;
+  TextKr?: string;
+  TextEn?: string;
+  TextTh?: string;
+}
+
+export interface FavorScheduleTitle {
+  GroupId: number;
+  FavorScheduleId: number;
+  TextJp?: string;
+  TextCn?: string;
+  TextKr?: string;
+  TextEn?: string;
+  TextTh?: string;
+}
+
+export interface StudentMomotalkData {
+  CharacterId: number;
+  titles: FavorScheduleTitle[];
+  content: Momotalk[];
 }

@@ -5,3 +5,4 @@ node_modules
 resources/excel/*
 resources/spine/*
 dist
+output

@@ -1,4 +1,4 @@
-// 没必要
+// 没有意义，这个文件里面卫星满天飞
 import fs from 'fs';
 import path from 'path';
 import { Student } from '../types/types';
