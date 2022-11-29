@@ -15,7 +15,7 @@
   "author": "",
   "devDependencies": {
     "@rushstack/eslint-patch": "1.2.0",
-    "@trivago/prettier-plugin-sort-imports": "3.4.0",
+    "@trivago/prettier-plugin-sort-imports": "4.0.0",
     "@types/js-yaml": "4.0.5",
     "@types/lodash-es": "4.17.6",
     "@types/minimist": "1.2.2",
