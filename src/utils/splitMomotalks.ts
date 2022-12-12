@@ -37,6 +37,7 @@ function splitMomotalks(momotalkList: Momotalk[]) {
 
     const studentMomotalkData: StudentMomotalkData = {
       CharacterId: parseInt(studentId),
+      translate: '',
       title: momotalkTitles,
       content: momotalksById[studentId].map(e => {
         e.MessageCN = e.MessageCN || '';

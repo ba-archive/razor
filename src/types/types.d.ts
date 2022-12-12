@@ -86,6 +86,7 @@ export interface FavorScheduleTitle {
 
 export interface StudentMomotalkData {
   CharacterId: number;
+  translate: string;
   title: FavorScheduleTitle[];
   content: Momotalk[];
 }
